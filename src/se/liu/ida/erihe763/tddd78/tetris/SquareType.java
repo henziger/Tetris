@@ -5,5 +5,5 @@ package se.liu.ida.erihe763.tddd78.tetris;
  */
 public enum SquareType
 {
-    EMPTY, I, O, T, S, Z, J, L
+    OUTSIDE, EMPTY, I, O, T, S, Z, J, L
 }
