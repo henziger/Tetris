@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab3a97f6-3a71-46fb-b055-a909c01ef5aa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisTextView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/SquareType.java" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/SquareType.java" />
+    <list default="true" id="ab3a97f6-3a71-46fb-b055-a909c01ef5aa" name="Default" comment="Continued work on Tetris, random board generation works.&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Poly.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisFrame.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrominoMaker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tetris.iws" afterPath="$PROJECT_DIR$/Tetris.iws" />
     </list>
     <ignored path="Tetris.iws" />
@@ -18,7 +19,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -82,12 +83,11 @@
       <file leaf-file-name="Board.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="45" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
+            <state line="58" column="0" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0" vertical-offset="640" max-vertical-offset="1170">
               <folding>
-                <element signature="e#655#656#0" expanded="true" />
-                <element signature="e#697#698#0" expanded="true" />
-                <element signature="e#727#728#0" expanded="true" />
-                <element signature="e#772#773#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1145#1266#0" expanded="true" />
+                <element signature="e#1259#1260#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,7 +105,27 @@
       <file leaf-file-name="BoardTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="50" selection-start="212" selection-end="212" vertical-scroll-proportion="0.36585367" vertical-offset="0" max-vertical-offset="375">
+            <state line="11" column="32" selection-start="261" selection-end="261" vertical-scroll-proportion="0.47413793" vertical-offset="0" max-vertical-offset="405">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TetrisFrame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="33" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="525">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TetrominoMaker.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrominoMaker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="51" selection-start="2154" selection-end="2154" vertical-scroll-proportion="0.0" vertical-offset="801" max-vertical-offset="1455">
               <folding />
             </state>
           </provider>
@@ -126,14 +146,16 @@
       <list>
         <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/SquareType.java" />
         <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisTextView.java" />
-        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java" />
+        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrominoMaker.java" />
         <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java" />
+        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java" />
+        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisFrame.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="399" />
-    <option name="y" value="240" />
+    <option name="x" value="455" />
+    <option name="y" value="154" />
     <option name="width" value="1171" />
     <option name="height" value="834" />
   </component>
@@ -203,8 +225,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,6 +313,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -317,19 +352,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -428,13 +450,18 @@
       <workItem from="1392027123850" duration="1506000" />
       <workItem from="1392121577794" duration="2757000" />
     </task>
+    <task id="LOCAL-00001" summary="Continued work on Tetris, random board generation works.">
+      <created>1392625777193</created>
+      <updated>1392625777193</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="4263000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="399" y="240" width="1171" height="834" extended-state="6" />
+    <frame x="455" y="154" width="1171" height="834" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -442,27 +469,27 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46226415" sideWeight="0.50044286" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.49955714" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25332153" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3992095" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46226415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4207263" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46226415" sideWeight="0.49955714" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3992095" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -477,6 +504,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Continued work on Tetris, random board generation works." />
+    <option name="LAST_COMMIT_MESSAGE" value="Continued work on Tetris, random board generation works." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -488,7 +517,46 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/SquareType.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="45" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1005">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1145#1266#0" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisTextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="21" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="50" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/SquareType.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisTextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="21" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
           <folding />
         </state>
       </provider>
@@ -502,26 +570,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="45" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
+        <state line="58" column="0" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0" vertical-offset="640" max-vertical-offset="1170">
           <folding>
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1145#1266#0" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisTextView.java">
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrominoMaker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
+        <state line="65" column="51" selection-start="2154" selection-end="2154" vertical-scroll-proportion="0.0" vertical-offset="801" max-vertical-offset="1455">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="33" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="525">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="50" selection-start="212" selection-end="212" vertical-scroll-proportion="0.36585367" vertical-offset="0" max-vertical-offset="375">
+        <state line="11" column="32" selection-start="261" selection-end="261" vertical-scroll-proportion="0.47413793" vertical-offset="0" max-vertical-offset="405">
           <folding />
         </state>
       </provider>

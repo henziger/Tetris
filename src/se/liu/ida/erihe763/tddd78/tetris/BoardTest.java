@@ -7,13 +7,15 @@ package se.liu.ida.erihe763.tddd78.tetris;
 public class BoardTest {
     public static void main(String[] args) {
 
-        // Generate and print three random boards.
-        Board rb1 = Board.generateRandomBoard();
-        Board rb2 = Board.generateRandomBoard();
-        Board rb3 = Board.generateRandomBoard();
+        Board b1 = new Board(20, 30);
+        b1.randomizeBoard();
+        TetrisFrame frame = new TetrisFrame(b1);
+        frame.pack();
+        frame.setVisible(true);
 
-        System.out.println(TetrisTextView.convertToText(rb1));
-        System.out.println(TetrisTextView.convertToText(rb2));
-        System.out.println(TetrisTextView.convertToText(rb3));
+        while(true) {
+            frame.updateTextArea();
+        }
+
     }
 }

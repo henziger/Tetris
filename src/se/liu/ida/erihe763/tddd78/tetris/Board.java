@@ -1,13 +1,20 @@
 package se.liu.ida.erihe763.tddd78.tetris;
 
 import java.util.Random;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
 
 /**
  * Created by erihe763 on 2014-02-16.
  */
 
 public class Board {
+
     private SquareType[][] squares;
+    private Poly falling;
+    private int fallingX;
+    private int fallingY;
+
 
     public Board(int width, int height) {
         squares = new SquareType[width][height];
@@ -41,21 +48,29 @@ public class Board {
     }
 
 
-    public static Board generateRandomBoard() {
-        Board randBoard = new Board(25, 25);
+    private final Action doOneStep = new AbstractAction() {
+        public void actionPerformed(ActionEvent e) {
+            randomizeBoard();
+        }
+    };
+
+    private final Timer clockTimer = new Timer(500, doOneStep);
+
+
+    public void randomizeBoard() {
         SquareType[] types = SquareType.values();
         
-        for (int i = 0; i < randBoard.getWidth(); i++) {
-            for (int j = 0; j < randBoard.getHeight(); j++) {
-                randBoard.setSquareType(i, j, types[new Random().nextInt(types.length -1)]);
+        for (int i = 0; i < this.getWidth(); i++) {
+            for (int j = 0; j < this.getHeight(); j++) {
+                this.setSquareType(i, j, types[new Random().nextInt(types.length - 1)]);
             }
         }
-        return randBoard;
+    }
+
+    public void updateBoard() {
+        clockTimer.setCoalesce(true);
+        clockTimer.start();
     }
 
 
-    public static void main(String[] args) {
-        Board b1 = new Board(24, 32);
-        System.out.println(b1.squares[0][12]);
-    }
 }
