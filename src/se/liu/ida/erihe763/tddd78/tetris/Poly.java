@@ -11,4 +11,12 @@ public class Poly {
     public Poly(SquareType[][] polyomino) {
         this.polyomino = polyomino;
     }
+
+    public SquareType getPolyTypeAt(int x, int y) {
+        return this.polyomino[y][x];
+    }
+
+    public int getSize() {
+        return this.polyomino.length;
+    }
 }

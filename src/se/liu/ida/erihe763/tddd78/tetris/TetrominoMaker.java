@@ -14,22 +14,22 @@ public class TetrominoMaker {
 
     public Poly getPoly(int n) {
         switch(n) {
-        case 0:
-            return getI();
-        case 1:
-            return getJ();
-        case 2:
-            return getL();
-        case 3:
-            return getO();
-        case 4:
-            return getS();
-        case 5:
-            return getT();
-        case 6:
-            return getZ();
-        default:
-            throw new IndexOutOfBoundsException("Invalid block type index: " + n);
+            case 0:
+                return getI();
+            case 1:
+                return getJ();
+            case 2:
+                return getL();
+            case 3:
+                return getO();
+            case 4:
+                return getS();
+            case 5:
+                return getT();
+            case 6:
+                return getZ();
+            default:
+                throw new IndexOutOfBoundsException("Invalid block type index: " + n);
         }
     }
 
@@ -44,26 +44,24 @@ public class TetrominoMaker {
 
     public Poly getJ() {
         return new Poly(new SquareType[][] {
-                { SquareType.EMPTY, SquareType.EMPTY, SquareType.J, SquareType.EMPTY },
-                { SquareType.EMPTY, SquareType.EMPTY, SquareType.J, SquareType.EMPTY },
-                { SquareType.EMPTY, SquareType.J, SquareType.J, SquareType.EMPTY }
+                { SquareType.EMPTY, SquareType.J, SquareType.EMPTY },
+                { SquareType.EMPTY, SquareType.J, SquareType.EMPTY },
+                { SquareType.J, SquareType.J, SquareType.EMPTY }
             });
     }
 
     public Poly getL() {
         return new Poly(new SquareType[][] {
-                { SquareType.EMPTY, SquareType.L, SquareType.EMPTY, SquareType.EMPTY },
-                { SquareType.EMPTY, SquareType.L, SquareType.EMPTY, SquareType.EMPTY },
-                { SquareType.EMPTY, SquareType.L, SquareType.L, SquareType.EMPTY }
+                { SquareType.EMPTY, SquareType.L, SquareType.EMPTY},
+                { SquareType.EMPTY, SquareType.L, SquareType.EMPTY},
+                { SquareType.EMPTY, SquareType.L, SquareType.L}
             });
     }
 
     public Poly getO() {
         return new Poly(new SquareType[][] {
-                { SquareType.EMPTY, SquareType.O, SquareType.O },
-                { SquareType.EMPTY, SquareType.O, SquareType.O },
-                // TODO: Can this be removed?
-                { SquareType.EMPTY, SquareType.EMPTY, SquareType.EMPTY }
+                { SquareType.O, SquareType.O },
+                { SquareType.O, SquareType.O },
             });
     }
 

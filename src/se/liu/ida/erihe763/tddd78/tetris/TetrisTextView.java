@@ -5,17 +5,20 @@ package se.liu.ida.erihe763.tddd78.tetris;
  * Created by erihe763 on 2014-02-16.
  */
 
-public class TetrisTextView {
+public final class TetrisTextView {
 
 
-    public static String convertToText(Board b) {
+    private TetrisTextView() {
+    }
+
+    public static String convertToText(Board board) {
 
         StringBuilder builder = new StringBuilder();
 
-        for (int i = 0; i < b.getWidth(); i++) {
-            for (int j = 0; j < b.getHeight(); j++) {
+        for (int i = 0; i < board.getWidth(); i++) {
+            for (int j = 0; j < board.getHeight(); j++) {
 
-                switch (b.getSquareType(i, j)) {
+                switch (board.getSquareType(i, j)) {
                     case OUTSIDE:
                         builder.append("§");
                         break;
