@@ -69,8 +69,8 @@ public class Board {
         if (this.falling == null) {
             return SquareType.EMPTY;
         }
-        for (int i = 0; i < this.falling.getSize(); i++) {
-            for (int j = 0; j< this.falling.getSize(); j++) {
+        for (int i = 0; i < this.falling.getWidth(); i++) {
+            for (int j = 0; j< this.falling.getHeight(); j++) {
                 if (x == (this.fallingPolyPos.x + i) && y == (this.fallingPolyPos.y + j)) {
                     return this.falling.getSquareType(i, j);
                 }
@@ -86,6 +86,9 @@ public class Board {
     }
 
 
+    /**
+     * Methods for handlig a single tick in the game.
+     */
     private final Action doOneStep = new AbstractAction() {
         public void actionPerformed(ActionEvent e) {
             tick();
@@ -121,6 +124,8 @@ public class Board {
         }
 
         this.notifyListeners();
+	// Uncomment if we want to see a textual representation of the board.
+        // System.out.println(TetrisTextView.convertToText(this));
     }
 
 
@@ -134,27 +139,6 @@ public class Board {
         }
     }
 
-
-    private void randomizeBoard() {
-        SquareType[] types = SquareType.values();
-        
-        for (int i = 1; i < this.getWidth() - 1; i++) {
-            for (int j = 1; j < this.getHeight() - 1; j++) {
-                this.setSquareType(i, j, types[new Random().nextInt(types.length - 1)]);
-            }
-        }
-
-        this.notifyListeners();
-    }
-
-
-    private void clearBoard() {
-        for (int i = 1; i < this.getWidth() - 1; i++) {
-            for (int j = 1; j < this.getHeight() - 1; j++) {
-                this.setSquareType(i, j, SquareType.EMPTY);
-            }
-        }
-    }
 
     /**
      * @return A random type of polyomino.
@@ -217,8 +201,8 @@ public class Board {
      * @return true if no interfering blocks are found, otherwise false.
      */
     private boolean validatePolyPosition(int xoffset, int yoffset) {
-        for (int i = 0; i < this.falling.getSize(); i++) {
-            for (int j = 0; j < this.falling.getSize(); j++) {
+        for (int i = 0; i < this.falling.getWidth(); i++) {
+            for (int j = 0; j < this.falling.getHeight(); j++) {
                 if (this.falling.getSquareType(i, j) != SquareType.EMPTY &&
                         !this.isSquareEmpty(this.fallingPolyPos.x + i + xoffset,
                                 this.fallingPolyPos.y + j + yoffset)) {
@@ -285,8 +269,8 @@ public class Board {
      * the board and make the squares stationary.
      */
     private void makeFallingStationary() {
-        for (int i = 0; i < this.falling.getSize(); i++) {
-            for (int j = 0; j < this.falling.getSize(); j++) {
+        for (int i = 0; i < this.falling.getWidth(); i++) {
+            for (int j = 0; j < this.falling.getHeight(); j++) {
                 SquareType polyType = this.falling.getSquareType(i, j);
                 if (polyType != SquareType.EMPTY) {
                     this.setSquareType(this.fallingPolyPos.x + i, this.fallingPolyPos.y + j, polyType);
@@ -301,15 +285,11 @@ public class Board {
     }
 
     private boolean existFalling() {
-	// IDEA warns that the check for null is not inside an if, ignore it.
-        if (this.falling != null) {
-            return true;
-        }
-        return false;
+        return this.falling != null;
     }
 
     private Point getSpawnPos() {
-	int startx = Math.round((float)this.getWidth() / 2 - (float)this.falling.getSize() / 2);
+	int startx = Math.round((float)this.getWidth() / 2 - (float)this.falling.getWidth() / 2);
         int starty = OUTSIDE_FRAME;
         return new Point(startx, starty);
     }
@@ -323,9 +303,30 @@ public class Board {
         this.gameOver = true;
     }
 
-    // FUTURE: Add feature to rotate blocks.
+    /**
+     * FUTURE: Add feature to rotate blocks. The methods randomizeBoard and clearBoard
+     * remain unused for now but may come in handy later on.
+     */
     private void rotate() {
     }
 
+    private void randomizeBoard() {
+        SquareType[] types = SquareType.values();
 
+        for (int i = 1; i < this.getWidth() - 1; i++) {
+            for (int j = 1; j < this.getHeight() - 1; j++) {
+                this.setSquareType(i, j, types[new Random().nextInt(types.length - 1)]);
+            }
+        }
+
+        this.notifyListeners();
+    }
+
+    private void clearBoard() {
+        for (int i = 1; i < this.getWidth() - 1; i++) {
+            for (int j = 1; j < this.getHeight() - 1; j++) {
+                this.setSquareType(i, j, SquareType.EMPTY);
+            }
+        }
+    }
 }

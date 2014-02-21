@@ -15,10 +15,10 @@ public final class TetrisTextView {
 
         StringBuilder builder = new StringBuilder();
 
-        for (int i = 0; i < board.getWidth(); i++) {
-            for (int j = 0; j < board.getHeight(); j++) {
+        for (int row = 0; row < board.getHeight(); row++) {
+            for (int column = 0; column < board.getWidth(); column++) {
 
-                switch (board.getSquareType(i, j)) {
+                switch (board.getSquareType(column, row)) {
                     case OUTSIDE:
                         builder.append("§");
                         break;

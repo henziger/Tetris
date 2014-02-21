@@ -8,10 +8,7 @@ public class Poly {
     
     private SquareType[][] polyomino;
 
-    public Poly(SquareType[][] polyomino) {
-	if (polyomino.length != polyomino[0].length) {
-	    //throw new TetrisException("Poly size must be quadratic");
-	}
+    public Poly(SquareType[][] polyomino)  {
         this.polyomino = polyomino;
     }
 
@@ -19,7 +16,7 @@ public class Poly {
         return this.polyomino[y][x];
     }
 
-    public int getSize() {
-        return this.polyomino.length;
-    }
+    public int getWidth() { return this.polyomino.length; }
+
+    public int getHeight() { return this.polyomino[0].length; }
 }
