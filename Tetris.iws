@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab3a97f6-3a71-46fb-b055-a909c01ef5aa" name="Default" comment="Graphical presentation works.&#10;&#10;Lots of unfinished methods in board.java for creating&#10;and moving polyominos.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardListener.java" />
+    <list default="true" id="ab3a97f6-3a71-46fb-b055-a909c01ef5aa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardListener.java" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Poly.java" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Poly.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tetris.ipr" afterPath="$PROJECT_DIR$/Tetris.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/SquareType.java" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/SquareType.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tetris.iws" afterPath="$PROJECT_DIR$/Tetris.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisComponent.java" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisComponent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisFrame.java" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisTextView.java" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisTextView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrominoMaker.java" afterPath="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrominoMaker.java" />
     </list>
     <ignored path="Tetris.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,16 +76,8 @@
       <file leaf-file-name="TetrisFrame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="4" selection-start="663" selection-end="663" vertical-scroll-proportion="-17.307692" vertical-offset="0" max-vertical-offset="1425">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1550#1689#0" expanded="true" />
-                <element signature="e#1682#1683#0" expanded="true" />
-                <element signature="e#1723#1863#0" expanded="true" />
-                <element signature="e#1856#1857#0" expanded="true" />
-                <element signature="e#1896#2035#0" expanded="true" />
-                <element signature="e#2028#2029#0" expanded="true" />
-              </folding>
+            <state line="30" column="4" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1843">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,7 +85,7 @@
       <file leaf-file-name="TetrisComponent.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="68" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="960">
+            <state line="29" column="63" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0" vertical-offset="97" max-vertical-offset="1330">
               <folding />
             </state>
           </provider>
@@ -104,7 +94,7 @@
       <file leaf-file-name="TetrisTextView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisTextView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="25" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="327" max-vertical-offset="930">
+            <state line="13" column="25" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="1178">
               <folding />
             </state>
           </provider>
@@ -113,7 +103,7 @@
       <file leaf-file-name="TetrominoMaker.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrominoMaker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="33" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
+            <state line="8" column="33" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1805">
               <folding />
             </state>
           </provider>
@@ -122,32 +112,28 @@
       <file leaf-file-name="Poly.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Poly.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="4" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+            <state line="18" column="24" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="532">
               <folding>
-                <element signature="e#363#364#0" expanded="true" />
-                <element signature="e#407#408#0" expanded="true" />
+                <element signature="e#361#362#0" expanded="true" />
+                <element signature="e#405#406#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Board.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Board.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="200" selection-end="200" vertical-scroll-proportion="0.20761245" vertical-offset="0" max-vertical-offset="4155">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2300#2411#0" expanded="true" />
-                <element signature="e#2404#2405#0" expanded="true" />
-              </folding>
+            <state line="206" column="22" selection-start="5566" selection-end="5566" vertical-scroll-proportion="-13.884615" vertical-offset="3401" max-vertical-offset="5662">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BoardTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BoardTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="23" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+            <state line="25" column="1" selection-start="544" selection-end="544" vertical-scroll-proportion="0.7996633" vertical-offset="0" max-vertical-offset="608">
               <folding />
             </state>
           </provider>
@@ -156,7 +142,7 @@
       <file leaf-file-name="BoardListener.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="31" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+            <state line="8" column="0" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
               <folding />
             </state>
           </provider>
@@ -165,7 +151,7 @@
       <file leaf-file-name="SquareType.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/SquareType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="12" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+            <state line="15" column="1" selection-start="547" selection-end="547" vertical-scroll-proportion="-10.961538" vertical-offset="0" max-vertical-offset="418">
               <folding />
             </state>
           </provider>
@@ -184,15 +170,15 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/SquareType.java" />
-        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardListener.java" />
         <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisTextView.java" />
-        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java" />
-        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisComponent.java" />
-        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java" />
-        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Poly.java" />
         <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisFrame.java" />
         <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrominoMaker.java" />
+        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisComponent.java" />
+        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java" />
+        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/SquareType.java" />
+        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardListener.java" />
+        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Poly.java" />
+        <option value="$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java" />
       </list>
     </option>
   </component>
@@ -279,12 +265,13 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="appearance" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Application.BoardTest">
     <configuration default="false" name="Board" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -501,7 +488,11 @@
       <created>1392839262977</created>
       <updated>1392839262977</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Almost done according to lab specification.&#10;&#10;Keybindings, collision detection and removal of complete&#10;rows of blocks implemented.">
+      <created>1392924549189</created>
+      <updated>1392924549189</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -516,10 +507,10 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976654" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32958803" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4173077" sideWeight="0.2657082" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4165103" sideWeight="0.2657082" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.49955714" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32684824" sideWeight="0.49828768" order="8" side_tool="false" content_ui="tabs" />
@@ -528,9 +519,9 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18423855" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39326924" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4173077" sideWeight="0.7342918" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.171459" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3923221" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4165103" sideWeight="0.7342918" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -553,7 +544,8 @@
     </option>
     <MESSAGE value="Continued work on Tetris, random board generation works." />
     <MESSAGE value="Graphical presentation works.&#10;&#10;Lots of unfinished methods in board.java for creating&#10;and moving polyominos." />
-    <option name="LAST_COMMIT_MESSAGE" value="Graphical presentation works.&#10;&#10;Lots of unfinished methods in board.java for creating&#10;and moving polyominos." />
+    <MESSAGE value="Almost done according to lab specification.&#10;&#10;Keybindings, collision detection and removal of complete&#10;rows of blocks implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Almost done according to lab specification.&#10;&#10;Keybindings, collision detection and removal of complete&#10;rows of blocks implemented." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -563,18 +555,114 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Poly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="4" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="420">
+          <folding>
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="4095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="23" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="31" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/SquareType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="12" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="4" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="68" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1005">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisTextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="25" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="327" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrominoMaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="33" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Poly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="4" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="420">
+          <folding>
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="4155">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="23" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="31" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/SquareType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="12" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="53" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="930">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1550#1689#0" expanded="true" />
-            <element signature="e#1682#1683#0" expanded="true" />
-            <element signature="e#1723#1863#0" expanded="true" />
-            <element signature="e#1856#1857#0" expanded="true" />
-            <element signature="e#1896#2035#0" expanded="true" />
-            <element signature="e#2028#2029#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -603,8 +691,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="34" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="570">
           <folding>
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -612,11 +700,7 @@
     <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="105" column="0" selection-start="2619" selection-end="2619" vertical-scroll-proportion="0.0" vertical-offset="1575" max-vertical-offset="1860">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2300#2411#0" expanded="true" />
-            <element signature="e#2404#2405#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -651,11 +735,7 @@
     <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="37" selection-start="1727" selection-end="1727" vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="1230">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2300#2411#0" expanded="true" />
-            <element signature="e#2404#2405#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -683,15 +763,7 @@
     <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="24" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="930">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1550#1689#0" expanded="true" />
-            <element signature="e#1682#1683#0" expanded="true" />
-            <element signature="e#1723#1863#0" expanded="true" />
-            <element signature="e#1856#1857#0" expanded="true" />
-            <element signature="e#1896#2035#0" expanded="true" />
-            <element signature="e#2028#2029#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -706,8 +778,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="13" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="300">
           <folding>
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -722,11 +794,7 @@
     <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="58" column="0" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="1230">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2300#2411#0" expanded="true" />
-            <element signature="e#2404#2405#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -747,15 +815,7 @@
     <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="33" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="525">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1550#1689#0" expanded="true" />
-            <element signature="e#1682#1683#0" expanded="true" />
-            <element signature="e#1723#1863#0" expanded="true" />
-            <element signature="e#1856#1857#0" expanded="true" />
-            <element signature="e#1896#2035#0" expanded="true" />
-            <element signature="e#2028#2029#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -776,11 +836,7 @@
     <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="45" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1005">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2300#2411#0" expanded="true" />
-            <element signature="e#2404#2405#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -805,56 +861,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/SquareType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="12" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="23" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Poly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="4" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <folding>
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="31" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="68" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="4" selection-start="663" selection-end="663" vertical-scroll-proportion="-17.307692" vertical-offset="0" max-vertical-offset="1425">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1550#1689#0" expanded="true" />
-            <element signature="e#1682#1683#0" expanded="true" />
-            <element signature="e#1723#1863#0" expanded="true" />
-            <element signature="e#1856#1857#0" expanded="true" />
-            <element signature="e#1896#2035#0" expanded="true" />
-            <element signature="e#2028#2029#0" expanded="true" />
-          </folding>
+        <state line="30" column="4" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1455">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -872,14 +882,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/TetrisComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="63" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0" vertical-offset="97" max-vertical-offset="1330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/SquareType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="1" selection-start="547" selection-end="547" vertical-scroll-proportion="-10.961538" vertical-offset="0" max-vertical-offset="418">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Poly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="24" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="532">
+          <folding>
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="200" selection-end="200" vertical-scroll-proportion="0.20761245" vertical-offset="0" max-vertical-offset="4155">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2300#2411#0" expanded="true" />
-            <element signature="e#2404#2405#0" expanded="true" />
-          </folding>
+        <state line="206" column="22" selection-start="5566" selection-end="5566" vertical-scroll-proportion="-13.884615" vertical-offset="3401" max-vertical-offset="5662">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/liu/ida/erihe763/tddd78/tetris/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="1" selection-start="544" selection-end="544" vertical-scroll-proportion="0.7996633" vertical-offset="0" max-vertical-offset="608">
+          <folding />
         </state>
       </provider>
     </entry>

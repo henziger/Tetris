@@ -11,13 +11,14 @@ public final class BoardTest {
 
     public static void main(String[] args) {
 
-        int boardWwidth = 20;
+        int boardWidth = 20;
         int boardHeight = 30;
-        Board b1 = new Board(boardWwidth, boardHeight);
+        Board b1 = new Board(boardWidth, boardHeight);
         TetrisFrame frame = new TetrisFrame(b1);
         frame.pack();
         frame.setVisible(true);
 
+	// Run forever or until user chooses to exit program.
         while(true) {
             b1.updateBoard();
         }

@@ -39,6 +39,7 @@ public class Board {
         this.notifyListeners();
     }
 
+
     public int getWidth() {
         return this.squares.length;
     }
@@ -47,28 +48,31 @@ public class Board {
         return this.squares[0].length;
     }
 
-    public SquareType getSquareType(int x, int y) {
-        SquareType fallingType = this.getFallingTypeAt(x, y);
+
+    protected SquareType getSquareType(int x, int y) {
+        SquareType fallingType = this.getFallingType(x, y);
         if (fallingType != SquareType.EMPTY) {
             return fallingType;
         }
         else {
-            return this.getStationaryTypeAt(x, y);
+            return this.getStationaryType(x, y);
         }
     }
 
-    public SquareType getStationaryTypeAt(int x, int y) {
+
+    private SquareType getStationaryType(int x, int y) {
         return this.squares[x][y];
     }
 
-    public SquareType getFallingTypeAt(int x, int y) {
+
+    private SquareType getFallingType(int x, int y) {
         if (this.falling == null) {
             return SquareType.EMPTY;
         }
         for (int i = 0; i < this.falling.getSize(); i++) {
             for (int j = 0; j< this.falling.getSize(); j++) {
                 if (x == (this.fallingPolyPos.x + i) && y == (this.fallingPolyPos.y + j)) {
-                    return this.falling.getPolyTypeAt(i, j);
+                    return this.falling.getPolyType(i, j);
                 }
             }
         }
@@ -76,7 +80,7 @@ public class Board {
     }
 
 
-    public void setSquareType(int x, int y, SquareType st) {
+    private void setSquareType(int x, int y, SquareType st) {
         this.squares[x][y] = st;
         this.notifyListeners();
     }
@@ -87,6 +91,8 @@ public class Board {
             tick();
         }
     };
+    private final Timer clockTimer = new Timer(TICK_DELAY, doOneStep);
+
 
     private void tick() {
         if (this.gameOver) {
@@ -117,8 +123,6 @@ public class Board {
         this.notifyListeners();
     }
 
-    private final Timer clockTimer = new Timer(TICK_DELAY, doOneStep);
-
 
     public void addBoardListener(BoardListener bl) {
         this.listenerList.add(bl);
@@ -129,7 +133,9 @@ public class Board {
             boardListener.boardChanged();
         }
     }
-    public void randomizeBoard() {
+
+
+    private void randomizeBoard() {
         SquareType[] types = SquareType.values();
         
         for (int i = 1; i < this.getWidth() - 1; i++) {
@@ -141,7 +147,8 @@ public class Board {
         this.notifyListeners();
     }
 
-    public void clearBoard() {
+
+    private void clearBoard() {
         for (int i = 1; i < this.getWidth() - 1; i++) {
             for (int j = 1; j < this.getHeight() - 1; j++) {
                 this.setSquareType(i, j, SquareType.EMPTY);
@@ -149,20 +156,35 @@ public class Board {
         }
     }
 
+    /**
+     * @return A random type of polyomino.
+     */
     public Poly spawnPoly() {
         TetrominoMaker tetrominoMaker = new TetrominoMaker();
         return tetrominoMaker.getPoly(new Random().nextInt(tetrominoMaker.getNumberOfTypes()));
     }
 
+
+    /**
+     * For all methods that wish to move the falling polyomino we assert two things:
+     * 1) It actually exists a falling polyomino.
+     * 2) The position that we wish to move the polyomino to is valid,
+     *    ie not occupied by other blocks.
+     * If movement occured we must notify all listeners to update their
+     * representation of the board.
+     */
     public void descendPoly() {
-        this.fallingPolyPos.y += 1;
+	if (this.existFalling() && validatePolyPosition(0, 1)) {
+	            this.fallingPolyPos.y += 1;
+	            this.notifyListeners();
+	}
     }
 
     public void moveLeft() {
-        if (this.existFalling() && validatePolyPosition(-1, 0)) {
-            this.fallingPolyPos.x -= 1;
-            this.notifyListeners();
-        }
+	if (this.existFalling() && validatePolyPosition(-1, 0)) {
+	            this.fallingPolyPos.x -= 1;
+	            this.notifyListeners();
+	}
     }
 
     public void moveRight() {
@@ -172,20 +194,21 @@ public class Board {
         }
     }
 
-    public void moveDown() {
+    public void moveAllWayDown() {
+	// As long as the block can be moved one step down, do it!
+	// This is nice when we don't want to wait for a block to
+	// slowly descend all the way down by itself.
         while (this.existFalling() && validatePolyPosition(0, 1)) {
             this.fallingPolyPos.y += 1;
         }
         this.notifyListeners();
     }
 
-
+    // TODO: Document!
     private boolean validatePolyPosition(int xoffset, int yoffset) {
-        // Check if any block in the falling polyomino that is not empty
-        // may be moved one step down.
         for (int i = 0; i < this.falling.getSize(); i++) {
             for (int j = 0; j < this.falling.getSize(); j++) {
-                if (this.falling.getPolyTypeAt(i, j) != SquareType.EMPTY &&
+                if (this.falling.getPolyType(i, j) != SquareType.EMPTY &&
                         !this.isSquareEmpty(this.fallingPolyPos.x + i + xoffset,
                                 this.fallingPolyPos.y + j + yoffset)) {
                     return false;
@@ -196,7 +219,7 @@ public class Board {
     }
 
     private boolean isSquareEmpty(int x, int y) {
-        if (this.getStationaryTypeAt(x, y) == SquareType.EMPTY) {
+        if (this.getStationaryType(x, y) == SquareType.EMPTY) {
             return true;
         }
         return false;
@@ -205,7 +228,7 @@ public class Board {
     private void removeCompleteRows() {
         for (int row = OUTSIDE_FRAME; row < (this.getHeight() - OUTSIDE_FRAME); row++) {
             for (int column = OUTSIDE_FRAME; column < (this.getWidth()); column++) {
-                if (getStationaryTypeAt(column, row) == SquareType.EMPTY) {
+                if (getStationaryType(column, row) == SquareType.EMPTY) {
                     break;
                 }
                 if (column == (this.getWidth() - OUTSIDE_FRAME)) {
@@ -220,7 +243,7 @@ public class Board {
     private void deleteRow(int index) {
         for (int i = index; i > OUTSIDE_FRAME + 1; i--) {
             for (int column = OUTSIDE_FRAME; column < this.getWidth() - OUTSIDE_FRAME; column++) {
-                this.setSquareType(column, i, this.getStationaryTypeAt(column, i-1));
+                this.setSquareType(column, i, this.getStationaryType(column, i - 1));
             }
         }
 
@@ -233,7 +256,7 @@ public class Board {
     private void makeFallingStationary() {
         for (int i = 0; i < this.falling.getSize(); i++) {
             for (int j = 0; j < this.falling.getSize(); j++) {
-                SquareType polyType = this.falling.getPolyTypeAt(i, j);
+                SquareType polyType = this.falling.getPolyType(i, j);
                 if (polyType != SquareType.EMPTY) {
                     this.setSquareType(this.fallingPolyPos.x + i, this.fallingPolyPos.y + j, polyType);
                 }
@@ -247,6 +270,7 @@ public class Board {
     }
 
     private boolean existFalling() {
+	// IDEA warns that the check for null is not inside an if, ignore it.
         if (this.falling != null) {
             return true;
         }
@@ -254,7 +278,7 @@ public class Board {
     }
 
     public Point getSpawnPos() {
-        int startx = Math.round(this.getWidth() / 2);
+	int startx = Math.round((float)this.getWidth() / 2 - (float)this.falling.getSize() / 2);
         int starty = OUTSIDE_FRAME;
         return new Point(startx, starty);
     }
@@ -268,6 +292,7 @@ public class Board {
         this.gameOver = true;
     }
 
+    // FUTURE: Add feature to rotate blocks.
     private void rotate() {
     }
 

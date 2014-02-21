@@ -73,7 +73,7 @@ public class TetrisFrame extends JFrame {
     private Action moveDown = new AbstractAction() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            board.moveDown();
+            board.moveAllWayDown();
         }
     };
 
@@ -84,8 +84,8 @@ public class TetrisFrame extends JFrame {
         tetrisComponent.getInputMap().put(KeyStroke.getKeyStroke("L"), "moveRight");
         tetrisComponent.getActionMap().put("moveRight", moveRight);
 
-        tetrisComponent.getInputMap().put(KeyStroke.getKeyStroke("J"), "moveDown");
-        tetrisComponent.getActionMap().put("moveDown", moveDown);
+        tetrisComponent.getInputMap().put(KeyStroke.getKeyStroke("J"), "moveAllWayDown");
+        tetrisComponent.getActionMap().put("moveAllWayDown", moveDown);
     }
 
 }

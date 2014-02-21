@@ -25,6 +25,9 @@ public class TetrisComponent extends JComponent implements BoardListener
         colorMap.put(SquareType.L, Color.ORANGE);
         colorMap.put(SquareType.O, Color.YELLOW);
         colorMap.put(SquareType.S, Color.GREEN);
+
+	// No predefined color for purple exist, so we define our own pruple
+	// with an RGB value of 128, 0, 128. Hex value #800080.
         Color purple = new Color(128, 0, 128);
         colorMap.put(SquareType.T, purple);
         colorMap.put(SquareType.Z, Color.RED);

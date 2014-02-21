@@ -12,7 +12,7 @@ public class Poly {
         this.polyomino = polyomino;
     }
 
-    public SquareType getPolyTypeAt(int x, int y) {
+    public SquareType getPolyType(int x, int y) {
         return this.polyomino[y][x];
     }
 
