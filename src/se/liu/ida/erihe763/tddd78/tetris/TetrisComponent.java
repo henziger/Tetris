@@ -40,6 +40,24 @@ public class TetrisComponent extends JComponent implements BoardListener
         return new Dimension(this.board.getWidth() * SQUARE_INT, this.board.getHeight() * SQUARE_INT);
     }
 
+
+
+    /**
+     * If we get notified that the board has been changed,we
+     * call the repaint method that calls the paintComponent method.
+     */
+    public void boardChanged() {
+        this.repaint();
+    }
+
+
+    /**
+     * Paints the board. The board har background color black.
+     * For all other squares we look in the colorMap to get
+     * an appropriate color. Every square is then painted
+     * using the fillRect method.
+     * @param g
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -58,7 +76,4 @@ public class TetrisComponent extends JComponent implements BoardListener
         }
     }
 
-    public void boardChanged() {
-        this.repaint();
-    }
 }

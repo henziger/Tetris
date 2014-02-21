@@ -29,10 +29,9 @@ public class TetrisFrame extends JFrame {
     }
 
     public void createMenus() {
-        final JMenu file = new JMenu("File");
+        final JMenu fileMenu = new JMenu("File");
         final JMenuItem avsluta = new JMenuItem("Avsluta");
-        file.add(avsluta);
-
+        fileMenu.add(avsluta);
 
         // Add listener for "Avsluta" menu item
         avsluta.addActionListener(new ActionListener() {
@@ -40,21 +39,22 @@ public class TetrisFrame extends JFrame {
                 String message = " Vill du verkligen avsluta? ";
                 String title = "Bye bye :(";
                 int reply = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.YES_NO_OPTION);
-                if (reply == JOptionPane.YES_OPTION)
+		if (reply == JOptionPane.YES_OPTION)
                 {
+		    // If we choose Yes, exit the program immediately. Otherwise do nothing.
                     System.exit(0);
                 }
             }
         });
 
         final JMenuBar menuBar = new JMenuBar();
-        menuBar.add(file);
+        menuBar.add(fileMenu);
         this.setJMenuBar(menuBar);
     }
 
 
     /**
-     * Key binding actions
+     * Key binding actions, vi style.
      */
     private Action moveLeft = new AbstractAction() {
         @Override
@@ -87,5 +87,4 @@ public class TetrisFrame extends JFrame {
         tetrisComponent.getInputMap().put(KeyStroke.getKeyStroke("J"), "moveAllWayDown");
         tetrisComponent.getActionMap().put("moveAllWayDown", moveDown);
     }
-
 }
