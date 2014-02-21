@@ -72,7 +72,7 @@ public class Board {
         for (int i = 0; i < this.falling.getSize(); i++) {
             for (int j = 0; j< this.falling.getSize(); j++) {
                 if (x == (this.fallingPolyPos.x + i) && y == (this.fallingPolyPos.y + j)) {
-                    return this.falling.getPolyType(i, j);
+                    return this.falling.getSquareType(i, j);
                 }
             }
         }
@@ -204,11 +204,22 @@ public class Board {
         this.notifyListeners();
     }
 
-    // TODO: Document!
+
+    /**
+     * Verify that the non-empty squares in the falling block doesn't
+     * interfere with a stationary block. The offset params perform a
+     * check on the blocks x,y squares from the falling blocks current
+     * position. This is used when determining if we may move a block
+     * in any direction.
+     *
+     * @param xoffset Check blocks that are [xoffset] blocks away horizontally.
+     * @param yoffset Check blocks that are [yoffset] blocks away vertically.
+     * @return true if no interfering blocks are found, otherwise false.
+     */
     private boolean validatePolyPosition(int xoffset, int yoffset) {
         for (int i = 0; i < this.falling.getSize(); i++) {
             for (int j = 0; j < this.falling.getSize(); j++) {
-                if (this.falling.getPolyType(i, j) != SquareType.EMPTY &&
+                if (this.falling.getSquareType(i, j) != SquareType.EMPTY &&
                         !this.isSquareEmpty(this.fallingPolyPos.x + i + xoffset,
                                 this.fallingPolyPos.y + j + yoffset)) {
                     return false;
@@ -225,6 +236,12 @@ public class Board {
         return false;
     }
 
+
+    /**
+     * Iterate over every row, if all squares in a row are non-empty it means
+     * that the row is complete and may be removed.
+     */
+
     private void removeCompleteRows() {
         for (int row = OUTSIDE_FRAME; row < (this.getHeight() - OUTSIDE_FRAME); row++) {
             for (int column = OUTSIDE_FRAME; column < (this.getWidth()); column++) {
@@ -232,6 +249,7 @@ public class Board {
                     break;
                 }
                 if (column == (this.getWidth() - OUTSIDE_FRAME)) {
+		    // We got to the last column in the row without finding an empty square.
                     // The row is complete, delete it!
                     this.deleteRow(row);
                 }
@@ -240,6 +258,14 @@ public class Board {
         this.notifyListeners();
     }
 
+
+    /**
+     * To remove a row and lower all rows above that one we iterate over
+     * every row and check the value of the block above. The topmost row
+     * have no row above it (except the outside row) so for that one we
+     * simply create a completely empty row.
+     * @param index The index number of the row that should be removed.
+     */
     private void deleteRow(int index) {
         for (int i = index; i > OUTSIDE_FRAME + 1; i--) {
             for (int column = OUTSIDE_FRAME; column < this.getWidth() - OUTSIDE_FRAME; column++) {
@@ -253,10 +279,15 @@ public class Board {
         }
     }
 
+
+    /**
+     * Make all the non-empty squares in the falling Poly write to
+     * the board and make the squares stationary.
+     */
     private void makeFallingStationary() {
         for (int i = 0; i < this.falling.getSize(); i++) {
             for (int j = 0; j < this.falling.getSize(); j++) {
-                SquareType polyType = this.falling.getPolyType(i, j);
+                SquareType polyType = this.falling.getSquareType(i, j);
                 if (polyType != SquareType.EMPTY) {
                     this.setSquareType(this.fallingPolyPos.x + i, this.fallingPolyPos.y + j, polyType);
                 }
@@ -277,7 +308,7 @@ public class Board {
         return false;
     }
 
-    public Point getSpawnPos() {
+    private Point getSpawnPos() {
 	int startx = Math.round((float)this.getWidth() / 2 - (float)this.falling.getSize() / 2);
         int starty = OUTSIDE_FRAME;
         return new Point(startx, starty);
