@@ -16,6 +16,7 @@ public class TetrisComponent extends JComponent implements BoardListener
 
     public TetrisComponent(Board board) {
         this.board = board;
+	this.board.addBoardListener(this);
 
         colorMap = new EnumMap<SquareType, Color>(SquareType.class);
         colorMap.put(SquareType.OUTSIDE, Color.DARK_GRAY);
@@ -56,7 +57,7 @@ public class TetrisComponent extends JComponent implements BoardListener
      * For all other squares we look in the colorMap to get
      * an appropriate color. Every square is then painted
      * using the fillRect method.
-     * @param g
+     * @param g Magic graphics component.
      */
     @Override
     protected void paintComponent(Graphics g) {

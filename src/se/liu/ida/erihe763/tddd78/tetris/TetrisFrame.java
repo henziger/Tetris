@@ -22,8 +22,6 @@ public class TetrisFrame extends JFrame {
 
         this.setLayout(new BorderLayout());
         this.add(tetrisComponent, BorderLayout.CENTER);
-        this.board.addBoardListener(tetrisComponent);
-
         this.setKeyBindings();
 
     }
