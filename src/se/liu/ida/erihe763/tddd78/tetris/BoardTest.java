@@ -18,9 +18,7 @@ public final class BoardTest {
         frame.pack();
         frame.setVisible(true);
 
-	// Run forever or until user chooses to exit program.
-        while(true) {
-            b1.updateBoard();
-        }
+        b1.updateBoard();
+
     }
 }

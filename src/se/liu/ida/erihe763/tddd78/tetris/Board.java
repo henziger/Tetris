@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Point;
 
 /**
- * Created by erihe763 on 2014-02-16.
+ * Created by Eric Henziger on 2014-02-16.
  */
 
 public class Board {
@@ -20,11 +20,14 @@ public class Board {
     private final static int OUTSIDE_FRAME = 1;
     private final static int TICK_DELAY = 200;
     private boolean gameOver = false;
+    private TetrominoMaker tetrominoMaker;
+
 
 
     public Board(int width, int height) {
         squares = new SquareType[width][height];
         listenerList = new ArrayList<BoardListener>();
+        tetrominoMaker = new TetrominoMaker();
 
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
@@ -99,6 +102,7 @@ public class Board {
 
     private void tick() {
         if (this.gameOver) {
+            clockTimer.stop();
             return;
         }
 
@@ -144,7 +148,6 @@ public class Board {
      * @return A random type of polyomino.
      */
     public Poly spawnPoly() {
-        TetrominoMaker tetrominoMaker = new TetrominoMaker();
         return tetrominoMaker.getPoly(new Random().nextInt(tetrominoMaker.getNumberOfTypes()));
     }
 
@@ -158,17 +161,17 @@ public class Board {
      * representation of the board.
      */
     public void descendPoly() {
-	if (this.existFalling() && validatePolyPosition(0, 1)) {
-	            this.fallingPolyPos.y += 1;
-	            this.notifyListeners();
-	}
+        if (this.existFalling() && validatePolyPosition(0, 1)) {
+            this.fallingPolyPos.y += 1;
+            this.notifyListeners();
+        }
     }
 
     public void moveLeft() {
-	if (this.existFalling() && validatePolyPosition(-1, 0)) {
-	            this.fallingPolyPos.x -= 1;
-	            this.notifyListeners();
-	}
+        if (this.existFalling() && validatePolyPosition(-1, 0)) {
+            this.fallingPolyPos.x -= 1;
+            this.notifyListeners();
+        }
     }
 
     public void moveRight() {
@@ -214,10 +217,7 @@ public class Board {
     }
 
     private boolean isSquareEmpty(int x, int y) {
-        if (this.getStationaryType(x, y) == SquareType.EMPTY) {
-            return true;
-        }
-        return false;
+        return  (this.getStationaryType(x, y) == SquareType.EMPTY);
     }
 
 
@@ -233,7 +233,7 @@ public class Board {
                     break;
                 }
                 if (column == (this.getWidth() - OUTSIDE_FRAME)) {
-		    // We got to the last column in the row without finding an empty square.
+                    // We got to the last column in the row without finding an empty square.
                     // The row is complete, delete it!
                     this.deleteRow(row);
                 }
@@ -307,7 +307,13 @@ public class Board {
      * FUTURE: Add feature to rotate blocks. The methods randomizeBoard and clearBoard
      * remain unused for now but may come in handy later on.
      */
-    private void rotate() {
+    public void rotate() {
+        Poly rotated = falling.rotate(true);
+        Poly original = falling;
+        falling = rotated;
+        if (!validatePolyPosition(0, 0)) {
+            falling = original;  // Collision, reset poly.
+        }
     }
 
     private void randomizeBoard() {
